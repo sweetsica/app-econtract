@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Web\AuthController;
+use App\Http\Controllers\Web\DashboardController;
+use App\Http\Controllers\Web\ContractController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,17 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', [AuthController::class, 'FormLogin'])->name('login');
+
+Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+Route::prefix('/contract')->group(function () {
+    Route::get('/', [ContractController::class, 'index'])->name('contract.index');
+    Route::get('/show/{id}', [ContractController::class, 'show'])->name('contract.show');
+
 });
 
-Route::get('/demo', function () {
-    return view('Demo');
-});
-
-Route::get('/demo', function () {
-    return view('Demo');
-});
 
 Route::get('/page-demo', function () {
     return view('Page.DemoPage');

@@ -293,23 +293,23 @@
 
         <!-- LOGO -->
         <div class="logo-box">
-            <a href="index.html" class="logo logo-dark">
+            <a href="{{ route('dashboard') }}" class="logo logo-dark">
                 <span class="logo-sm">
-                    <img src="assets/images/logo-sm.png" alt="" height="24">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" height="30">
                     <!-- <span class="logo-lg-text-light">Shreyu</span> -->
                 </span>
                 <span class="logo-lg">
-                    <img src="assets/images/logo-dark.png" alt="" height="24">
+                    <img src="{{ asset('assets/images/logo-full.png') }}" alt="Logo" height="50">
                     <!-- <span class="logo-lg-text-light">S</span> -->
                 </span>
             </a>
 
-            <a href="index.html" class="logo logo-light">
+            <a href="{{ route('dashboard') }}" class="logo logo-light">
                 <span class="logo-sm">
-                    <img src="assets/images/logo-sm.png" alt="" height="24">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" height="30">
                 </span>
                 <span class="logo-lg">
-                    <img src="assets/images/logo-light.png" alt="" height="24">
+                    <img src="{{ asset('assets/images/logo-full.png') }}" alt="Logo" height="50">
                 </span>
             </a>
         </div>
@@ -333,7 +333,7 @@
                 <!-- End mobile menu toggle-->
             </li>
 
-            <li class="dropdown d-none d-xl-block">
+            {{-- <li class="dropdown d-none d-xl-block">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-haspopup="false" aria-expanded="false">
                     Create New
@@ -368,7 +368,7 @@
                     </a>
 
                 </div>
-            </li>
+            </li> --}}
 
         </ul>
         <div class="clearfix"></div>
